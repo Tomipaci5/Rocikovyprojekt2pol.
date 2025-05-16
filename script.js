@@ -3,7 +3,7 @@ const tlacitkoHledat = document.querySelector(".tlacitko-hledat");
 const tlacitkoLokace = document.querySelector(".tlacitko-lokace");
 const aktualniPocasiDiv = document.querySelector(".aktualni-pocasi");
 const kartyPocasiDiv = document.querySelector(".karty-pocasi");
-const API_KLIC = "e5dcf5d73fcc2fcd185a3ba03cf4f690";
+const API_KLIC = "Api klic";
 
 const vytvorKartuPocasi = (nazevMesta, polozkaPocasi, index) => {
     if(index === 0) {
