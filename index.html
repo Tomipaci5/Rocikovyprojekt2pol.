@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Počasí</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Předpověď počasí</h1>
+    <div class="container">
+        <div class="vstup-pocasi">
+            <h3>Zadejte název města</h3>
+            <input class="vstup-mesto" type="text" placeholder="Např. Praha, Brno, Ostrava">
+            <button class="tlacitko-hledat">Hledat</button>
+            <div class="oddeleni"></div>
+            <button class="tlacitko-lokace">Použít aktuální polohu</button>
+        </div>
+        <div class="data-pocasi">
+            <div class="aktualni-pocasi">
+                <div class="detaily">
+                    <h2>_______ ( ______ )</h2>
+                    <h6>Teplota: __°C</h6>
+                    <h6>Vítr: __ m/s</h6>
+                    <h6>Vlhkost: __%</h6>
+                </div>
+            </div>
+            <div class="predpoved-dnu">
+                <h2>5-denní předpověď</h2>
+                <ul class="karty-pocasi">
+                    <li class="karta">
+                        <h3>( ______ )</h3>
+                        <h6>Teplota: __°C</h6>
+                        <h6>Vítr: __ m/s</h6>
+                        <h6>Vlhkost: __%</h6>
+                    </li>
+                    <!-- Additional forecast cards... -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

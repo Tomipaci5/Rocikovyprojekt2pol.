@@ -1,0 +1,135 @@
+/* Import Google font - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background: #E3F2FD;
+}
+h1 {
+  background: #5372F0;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 18px 0;
+  color: #fff;
+}
+.container {
+  display: flex;
+  gap: 35px;
+  padding: 30px;
+}
+.vstup-pocasi {
+  width: 550px;
+}
+.vstup-pocasi input {
+  height: 46px;
+  width: 100%;
+  outline: none;
+  font-size: 1.07rem;
+  padding: 0 17px;
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.vstup-pocasi input:focus {
+  padding: 0 16px;
+  border: 2px solid #5372F0;
+}
+.vstup-pocasi .oddeleni {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #BBBBBB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.vstup-pocasi .oddeleni::before {
+  content: "nebo";
+  color: #6C757D;
+  font-size: 1.18rem;
+  padding: 0 15px;
+  margin-top: -4px;
+  background: #E3F2FD;
+}
+.vstup-pocasi button {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  background: #5372F0;
+  transition: 0.2s ease;
+}
+.vstup-pocasi .tlacitko-hledat:hover {
+  background: #2c52ed;
+}
+.vstup-pocasi .tlacitko-lokace {
+  background: #6C757D;
+}
+.vstup-pocasi .tlacitko-lokace:hover {
+  background: #5c636a;
+}
+.data-pocasi {
+  width: 100%;
+}
+.data-pocasi .aktualni-pocasi {
+  color: #fff;
+  background: #5372F0;
+  border-radius: 5px;
+  padding: 20px 70px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.aktualni-pocasi h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.data-pocasi h6 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.aktualni-pocasi .ikona {
+  text-align: center;
+}
+.aktualni-pocasi .ikona img {
+  max-width: 120px;
+  margin-top: -15px;
+}
+.aktualni-pocasi .ikona h6 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+.predpoved-dnu h2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+.predpoved-dnu .karty-pocasi {
+  display: flex;
+  gap: 20px;
+}
+.karty-pocasi .karta {
+  color: #fff;
+  padding: 18px 16px;
+  list-style: none;
+  width: calc(100% / 5);
+  background: #6C757D;
+  border-radius: 5px;
+}
+.karty-pocasi .karta h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.karty-pocasi .karta img {
+  max-width: 70px;
+  margin: 5px 0 -12px 0;
+}
+
+/* Responsive styles remain the same... */
