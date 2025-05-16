@@ -124,6 +124,7 @@ _____________________________________________________________________________
 
 Shrnutí:
 Kód pro jednoduchou aplikaci, která ukazuje počasí (teplotu, vlhkost, rychlost větru a další.
+
 Zde přidávám rychlou ukázku mé práce v podobě Youtube videa - https://www.youtube.com/watch?v=I1YiaS8cuf8
 
 Ještě jednou děkuji Matějovi za pomoc se skriptem a doufám, že se vám můj projekt líbil.
