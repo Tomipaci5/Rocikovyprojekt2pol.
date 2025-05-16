@@ -1,18 +1,20 @@
 # Rocikovyprojekt2pol.
-Ročníkový projekt 2. pololetí , Tomáš Jakub T3A
+Ročníkový projekt 2. pololetí, Tomáš Jakub T3A
 
-Pro tento projekt sem se rozhodl udelat stranku ohledne pocasi s peti denni predpovedi vlhkosti a rychlosti vetru.
-Musel sem si sechnat api key ktery mi umozni ziskavani dat o pocasi. Tento klic sem sehnal za registraci na strance Openweathermap.
+Pro tento projekt jsem se rozhodl udělat stránku ohledně počasí s pětidenní předpovědí, vlhkostí a rychlostí větru.
+Musel jsem si sehnat API klíč, který mi umožní získávání dat o počasí. Tento klíč jsem sehnal za registraci na stránce OpenWeatherMap. (https://home.openweathermap.org)
+
 ![apiklic](https://github.com/user-attachments/assets/55d982a2-978d-4637-9358-81974d7203d6)
 
-Po te co jsem sehnal klic jsem se pustil do prace.
-Napsat Html a Css kod byla jednducha vec jelikoz se poslednich par mesicu snazim makat na sve forme ve psani webovych stranek. Pote jsem se ale dostal do tuhych. Me zkusenosti s javascriptem jsou zcela zakladni a udelat takto tezky script vyzadovalo pot a drinu.
-Po shlednuti videi na youtube jsem byl schopen napsat script ale stale se mi objevovali nejake chyby na ktere neprisel ani strejda chat gpt. Skript proste nesel rozdychat a tak jsem poprosil meho kamarada Mateje Víta zda by mi nemohl byt schopen pomoct. Pripojili sme se na discord a uz to jelo s Matejovymi zkusenostmi sme byli schopni script opravit a tim rozpohybovat funkcnost stranky. Nejvetsi problemy nam delali funkce jako const vytvorKartuPocasi = (nazevMesta, polozkaPocasi, index), const ziskatUzivatelovuPolohu = () a const ziskatSouradniceMesta = (). Nastesti vse dopadlo v poradku a ja dekuji matejovi on je to vlastne takovy muj zivy stack overflow!
+Po té, co jsem sehnal klíč, jsem se pustil do práce.
+Napsat HTML a CSS kód byla jednoduchá věc, jelikož se posledních pár měsíců snažím makat na své formě ve psaní webových stránek. Poté jsem se ale dostal do tuhého. Mé zkušenosti s JavaScriptem jsou zcela základní a udělat takto těžký skript vyžadovalo pot a dřinu.
+Po shlédnutí videí na YouTube jsem byl schopen napsat skript, ale stále se mi objevovaly nějaké chyby, na které nepřišel ani strejda ChatGPT. Skript prostě nešel rozdychat, a tak jsem poprosil mého kamaráda Matěje Víta, zda by mi nebyl schopen pomoct. Připojili jsme se na Discord a už to jelo — s Matějovými zkušenostmi jsme byli schopni skript opravit a tím rozpohybovat funkčnost stránky. Největší problémy nám dělaly funkce jako const vytvorKartuPocasi = (nazevMesta, polozkaPocasi, index), const ziskatUzivatelovuPolohu = () a const ziskatSouradniceMesta = ().
+Naštěstí vše dopadlo v pořádku a já děkuji Matějovi — on je to vlastně takový můj živý Stack Overflow!
 
-Strucne vysvetlene funkce v script.js souboru: 
+Stručně vysvětlené funkce v script.js souboru:
 
 const vstupMesta = document.querySelector(".vstup-mesto");
-Pole pro zadani mesta
+Pole pro zadání města
 
 _____________________________________________________________________________
 
@@ -22,32 +24,35 @@ Najde tlačítko s třídou .tlacitko-hledat (spouští vyhledávání počasí 
 _____________________________________________________________________________
 
 const tlacitkoLokace = document.querySelector(".tlacitko-lokace");
-Najde tlačítko s třídou .tlacitko-lokace (pro ziskani zive lokace)
+Najde tlačítko s třídou .tlacitko-lokace (pro získání živé lokace)
 
 _____________________________________________________________________________
 
 const aktualniPocasiDiv = document.querySelector(".aktualni-pocasi");
-Určuje místo na stránce, kam se zobrazí aktuální počasí 
+Určuje místo na stránce, kam se zobrazí aktuální počasí
 
 _____________________________________________________________________________
 
 const kartyPocasiDiv = document.querySelector(".karty-pocasi");
-Určuje místo na stránce, kam se vloží další dny předpovědi 
+Určuje místo na stránce, kam se vloží další dny předpovědi
 
 _____________________________________________________________________________
 
 const API_KLIC = "API klic";
-API klíč k přístupu do služby OpenWeatherMap 
+API klíč k přístupu do služby OpenWeatherMap
 
 _____________________________________________________________________________
 
-vytvorKartuPocasi(nazevMesta, polozkaPocasi, index): Vytvoří HTML kód pro zobrazení dnů s počasím.
+vytvorKartuPocasi(nazevMesta, polozkaPocasi, index)
+Vytvoří HTML kód pro zobrazení dnů s počasím.
 
-Co delá vnitřek funkce:
+Co dělá vnitřek funkce:
 
-Pokud je první den index = 0, vytvoří se vetší karta s podrobnostmi (město, datum, teplota, vítr, vlhkost a ikona počasí)
+Pokud je první den (index = 0), vytvoří se větší karta s podrobnostmi (město, datum, teplota, vítr, vlhkost a ikona počasí)
+
 ![image](https://github.com/user-attachments/assets/accffc36-9bae-48b7-a46e-25758eda5bbf)
 U ostatních dnů vytvoří menší karty se stejnými informacemi
+
 ![image](https://github.com/user-attachments/assets/c96a2c93-68b3-44d5-a17b-4ccdf95f4cad)
 
 Data jako teplota se převedou z Kelvinů na °C
@@ -60,15 +65,15 @@ Co dělá vnitřek funkce:
 
 Vytvoří URL pro OpenWeather API
 
-Použije fetch a přečte odpověd jako .json
+Použije fetch a přečte odpověď jako .json
 
-Vyfiltruje záznam na každy den 
+Vyfiltruje záznam na každý den
 
-Vyčistí data z predchoziho hledani
+Vyčistí data z předchozího hledání
 
-Pro každý den vytvoří kartu a zobrazí ji na stránce 
+Pro každý den vytvoří kartu a zobrazí ji na stránce
 
-Kdyby nastala chyba vypise zpravu
+Kdyby nastala chyba, vypíše zprávu
 
 ![image](https://github.com/user-attachments/assets/e45cf871-2ecf-40c7-8764-852688ac44c2)
 
@@ -78,9 +83,13 @@ ziskatSouradniceMesta(): Najde souřadnice zadaného města.
 
 Co dělá vnitřek funkce:
 
-Načte název města 
+Načte název města
 
-Pošle požadavek pro API OpenWeather (nazev města na souřadnice).
+Pošle požadavek na API OpenWeather (název města → souřadnice)
+
+Pokud se město nenajde, zobrazí upozornění
+
+Pokud se souřadnice získají, zavolá funkci pro získání podrobností o počasí
 
 _____________________________________________________________________________
 
@@ -88,30 +97,37 @@ ziskatUzivatelovuPolohu(): Získá aktuální polohu uživatele pomocí prohlí�
 
 Co dělá vnitřek funkce:
 
-Použije getCurrentPosition() pro získání souřadnic.
+Použije getCurrentPosition() pro získání souřadnic
 
-Ze souřadnic pak pošle požadavek geo API (souřadnice → název města).
+Ze souřadnic pošle požadavek na geo API (souřadnice → název města)
 
-Získané město a souřadnice předá funkci ziskatDetailyPocasi().
+Získané město a souřadnice předá funkci ziskatDetailyPocasi()
 
-Pokud uživatel nepovolí přístup k poloze, zobrazí se upozornění.
-
-_____________________________________________________________________________
-
-tlacitkoLokace.addEventListener("click", ziskatUzivatelovuPolohu);: Po kliknutí na tlačítko s lokací → zavolá funkci pro počasí podle polohy.
+Pokud uživatel nepovolí přístup k poloze, zobrazí se upozornění
 
 _____________________________________________________________________________
 
-tlacitkoHledat.addEventListener("click", ziskatSouradniceMesta);: o kliknutí na tlačítko hledat → zavolá funkci pro počasí podle města.
+tlacitkoLokace.addEventListener("click", ziskatUzivatelovuPolohu);
+Po kliknutí na tlačítko s lokací se zavolá funkce pro počasí podle polohy.
 
 _____________________________________________________________________________
 
-vstupMesta.addEventListener("keyup", e => e.key === "Enter" && ziskatSouradniceMesta());: Po stisknutí Enter ve vstupním poli → spustí hledání města.
+tlacitkoHledat.addEventListener("click", ziskatSouradniceMesta);
+Po kliknutí na tlačítko hledat se zavolá funkce pro počasí podle města.
 
-Shrnutí: 
+_____________________________________________________________________________
 
-Kod pro jednoduchou aplikaci ktera ukazuje pocasi (teplotu, vlhkost, rychlost vetru a dalsi).
+vstupMesta.addEventListener("keyup", e => e.key === "Enter" && ziskatSouradniceMesta());
+Po stisknutí klávesy Enter ve vstupním poli se spustí hledání města.
 
-Jeste jendou dekuji Matejovi za pomoc se scriptem a vam ze jste si precetl muj projekt.
+_____________________________________________________________________________
+
+Shrnutí:
+Kód pro jednoduchou aplikaci, která ukazuje počasí (teplotu, vlhkost, rychlost větru a další).
+
+Ještě jednou děkuji Matějovi za pomoc se skriptem a doufám, že se vám můj projekt líbil.
+
+
+
 
 
