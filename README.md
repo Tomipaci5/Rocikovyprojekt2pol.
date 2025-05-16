@@ -2,7 +2,7 @@
 Ročníkový projekt 2. pololetí, Tomáš Jakub T3A
 
 Pro tento projekt jsem se rozhodl udělat stránku ohledně počasí s pětidenní předpovědí, vlhkostí a rychlostí větru.
-Musel jsem si sehnat API klíč, který mi umožní získávání dat o počasí. Tento klíč jsem sehnal za registraci na stránce OpenWeatherMap. (https://home.openweathermap.org)
+Musel jsem si sehnat API klíč, který mi umožní získávání dat o počasí. Tento klíč jsem sehnal za registraci na stránce OpenWeatherMap. 
 
 ![apiklic](https://github.com/user-attachments/assets/55d982a2-978d-4637-9358-81974d7203d6)
 
@@ -123,9 +123,18 @@ Po stisknutí klávesy Enter ve vstupním poli se spustí hledání města.
 _____________________________________________________________________________
 
 Shrnutí:
-Kód pro jednoduchou aplikaci, která ukazuje počasí (teplotu, vlhkost, rychlost větru a další).
+Kód pro jednoduchou aplikaci, která ukazuje počasí (teplotu, vlhkost, rychlost větru a další.
+Zde přidávám rychlou ukázku mé práce v podobě Youtube videa - https://www.youtube.com/watch?v=I1YiaS8cuf8
 
 Ještě jednou děkuji Matějovi za pomoc se skriptem a doufám, že se vám můj projekt líbil.
+
+
+Github - https://github.com
+
+Openweather - https://home.openweathermap.org
+
+Visual Studio - https://code.visualstudio.com
+
 
 
 
